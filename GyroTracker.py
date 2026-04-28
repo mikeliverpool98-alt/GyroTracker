@@ -29,7 +29,7 @@ if page == "Log a Gyro":
 
     name = st.selectbox(
         "Who are you?",
-        ["", "Sam","Abbie","Michael","Ruby","Xander","Liv"]
+        ["", "Sam","Abbie","Michael","Ruby","Xander","Rosi"]
     )
 
 
@@ -152,7 +152,7 @@ elif page == "Leaderboard":
                 # -------------------------
                 # TIMELINE Trial
                 # -------------------------
-                people = ["Sam", "Abbie", "Michael", "Ruby", "Xander", "Liv"]
+                people = ["Sam", "Abbie", "Michael", "Ruby", "Xander", "Rosi"]
                 import plotly.graph_objects as go
 
                 df["created_at"] = pd.to_datetime(df["created_at"], utc=True)
