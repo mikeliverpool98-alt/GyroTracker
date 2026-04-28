@@ -40,6 +40,12 @@ input, .stSelectbox, .stSlider {
     margin-bottom: 1rem;
     border-left: 5px solid #0D5EAF;
 }
+            
+/* Target st.text output */
+.stText {
+    font-size: 14px !important;  /* Smaller than default (~16px) */
+    line-height: 1.4;
+}
 
 </style>
 """, unsafe_allow_html=True)
@@ -68,8 +74,10 @@ def log_a_gyro():
         "Who are you?",
         ["", "Sam","Abbie","Michael","Ruby","Xander","Liv"]
     )
+    
+    st.text("⭐ Rate your gyro")
 
-    rating = st.slider("Rating ⭐", 1, 5, 3)
+    rating = st.feedback("stars")
 
     location = st.text_input("📍 Where did you get it?")
 
@@ -78,7 +86,7 @@ def log_a_gyro():
             try:
                 supabase.table("gyros").insert({
                     "name": name,
-                    "rating": rating,
+                    "rating": rating+1,  # feedback component is 0-indexed
                     "location": location
                 }).execute()
 
