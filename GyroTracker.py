@@ -76,8 +76,10 @@ def log_a_gyro():
     )
     
     st.text("⭐ Rate your gyro")
+    col1, col2, col3 = st.columns([1, 3, 1])
 
-    rating = st.feedback("stars")
+    with col2:
+        rating = st.feedback("stars")
 
     location = st.text_input("📍 Where did you get it?")
 
