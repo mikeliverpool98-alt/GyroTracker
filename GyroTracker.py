@@ -5,8 +5,8 @@ from supabase import create_client
 import os
 
 # Initialize Supabase client
-SUPABASE_URL="https://zprmhdtcsjrlqibqhglv.supabase.co"
-SUPABASE_KEY="sb_publishable_H1fGiOIh0bC7pmmeoUW00Q_NFMuLzp8"
+SUPABASE_URL=st.secrets["SUPABASE_URL"]
+SUPABASE_KEY=st.secrets["SUPABASE_KEY"]
 supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
 
 # -------------------------
