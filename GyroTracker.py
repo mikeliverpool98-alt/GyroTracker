@@ -275,7 +275,7 @@ def leaderboard():
     if not df.empty:
         df["created_at"] = pd.to_datetime(df["created_at"], utc=True)
 
-        start = pd.Timestamp("2026-04-01", tz="UTC")
+        start = pd.Timestamp("2026-05-01", tz="UTC")
         end = pd.Timestamp("2026-05-08", tz="UTC")
 
         filtered = df[(df["created_at"] >= start) & (df["created_at"] <= end)]
