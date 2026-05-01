@@ -355,7 +355,7 @@ def leaderboard():
     # Ensure datetime
     filtered["date"] = filtered["created_at"].dt.tz_convert("Europe/London").dt.date
 
-    start_date = pd.Timestamp("2026-04-26", tz="Europe/London")
+    start_date = pd.Timestamp("2026-05-01", tz="Europe/London")
     end_date = pd.Timestamp("2026-05-08 23:59:59", tz="Europe/London")
 
     # Find last date where ANY data exists
